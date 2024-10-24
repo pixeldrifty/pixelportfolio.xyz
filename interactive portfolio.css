@@ -11,7 +11,7 @@ body {
   color: white;
 }
 
-/* definers */
+/* definers/vars */
 
 :root {
   --color-main: rgb(32, 35, 42);
@@ -72,9 +72,6 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* delete this later */
-  opacity: 0;
-  z-index: -9999;
 }
 
 #door-sub-left {
