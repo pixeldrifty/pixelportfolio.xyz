@@ -1,0 +1,251 @@
+body {
+  font-family: "Feather Bold";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--color-bg);
+  color: white;
+}
+
+/* definers */
+
+:root {
+  --color-main: rgb(32, 35, 42);
+  --color-secondary: rgb(24, 27, 36);
+  --color-icon: rgb(218, 151, 42);
+  --color-bg: rgb(28,31,39);
+  --color-outline: #57595f66;
+  --drop-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --widget-z: 1;
+  --widget-z-d: 2;
+  --widget-z-b: 3;
+}
+
+.fa-solid {
+  font-size: 1.85em;
+  color: var(--color-icon);
+}
+
+/* main door */
+
+.menu-open-icon {
+  color: var(--color-icon) !important;
+  font-size: 2.75rem !important;
+}
+
+#btn-menu-open {
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-main);
+  border-radius: 100%;
+  filter: drop-shadow(0 5px 0 var(--color-secondary));
+  border: 3px solid var(--color-secondary);
+  cursor: pointer;
+  transition: ease opacity .5s, background-color 0.25s;
+  position: absolute;
+  z-index: 9999;
+}
+
+#btn-menu-open:hover {
+  transform: translate(0, 10px);
+  filter: none;
+  clip-path: circle(50%);
+}
+
+#btn-menu-open:active {
+  filter: drop-shadow(0 -10px 0 var(--color-secondary));
+  transform: translate(0, 20px);
+  clip-path: circle(50% at 50px 40px);
+  background-color: var(--color-secondary);
+}
+
+#door-main {
+  width: 100vw;
+  height:  100vh;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* delete this later */
+  opacity: 0;
+  z-index: -9999;
+}
+
+#door-sub-left {
+  height: 100%;
+  width: 50%;
+  background-color: var(--color-main);
+  box-sizing: border-box;
+  border-right: 2px solid var(--color-secondary);
+  transition: ease 2s;
+  z-index: 9998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#door-sub-right {
+  height: 100%;
+  width: 50%;
+  background-color: var(--color-main);
+  box-sizing: border-box;
+  border-left: 2px solid var(--color-secondary);
+  transition: ease 2s;
+  z-index: 9998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.door-lines {
+  width: 80%;
+  height: 90%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://img.freepik.com/premium-photo/black-white-strip-line-warning-sign-pattern_65873-14.jpg);
+  border-radius: 20px;
+  opacity: .01;
+  z-index: inherit;
+}
+
+.door-lines::before {
+  position: absolute;
+  border-radius: 20px;
+  opacity: 1;
+  z-index: inherit;
+  background-color: rgb(32, 35, 43);
+}
+
+/* main */
+
+main {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+/* music container */
+
+.cont-music {
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  background-color: var(--color-main);
+  margin-top: 30px;
+  margin-left: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s border;
+  border: solid 1px transparent;
+  box-shadow: var(--drop-shadow);
+  overflow: hidden;
+}
+
+.cont-music:hover {
+  border: solid 1px var(--color-outline);
+}
+
+.music-section {
+  position: absolute;
+}
+
+/* music buttons internal */
+
+#btn-music-left {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: lime;
+  border: none;
+  filter: drop-shadow(0 5px 0 var(--color-secondary));
+}
+
+#btn-music-right {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: lime;
+  border: none;
+  filter: drop-shadow(0 5px 0 var(--color-secondary));
+}
+
+/* music door area */
+
+#music-door-main {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#music-door-left {
+  height: 100%;
+  width: 50%;
+  background-color: var(--color-main);
+  box-sizing: border-box;
+  border-right: 2px solid var(--color-secondary);
+  transition: ease 2s;
+  z-index: var(--widget-z-d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#music-door-right {
+  height: 100%;
+  width: 50%;
+  background-color: var(--color-main);
+  box-sizing: border-box;
+  border-left: 2px solid var(--color-secondary);
+  transition: ease 2s;
+  z-index: var(--widget-z-d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* button to open music area */
+
+#btn-music-open {
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-main);
+  border-radius: 100%;
+  filter: drop-shadow(0 5px 0 var(--color-secondary));
+  border: 3px solid var(--color-secondary);
+  cursor: pointer;
+  transition: ease opacity .5s, background-color 0.25s;
+  position: absolute;
+  z-index: var(--widget-z-b);
+}
+
+#btn-music-open:hover {
+  transform: translate(0, 10px);
+  filter: none;
+  clip-path: circle(50%);
+}
+
+#btn-music-open:active {
+  filter: drop-shadow(0 -10px 0 var(--color-secondary));
+  transform: translate(0, 20px);
+  clip-path: circle(50% at 35px 30px);
+  background-color: var(--color-secondary);
+}
+
+#btn-music-open:active > .fa-music {
+  color: var(--color-icon);
+  opacity: .60;
+}
