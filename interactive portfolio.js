@@ -23,12 +23,32 @@ window.onload = function() {
         const mrd = document.getElementById('music-door-right')
         const mdoor = document.getElementById('music-door-main')
 
-        mrd.style.transform = 'translate(325px, 0px)'
-        mld.style.transform = 'translate(-325px, 0px)'
+        mrd.style.transform = 'translate(100%, 0px)'
+        mld.style.transform = 'translate(-100%, 0px)'
         mbtn.style.opacity = '0'
         mbtn.style.cursor = 'default'
         setTimeout(function() {
           mdoor.style.zIndex = '-9999'
+        }, 2000)
+      }
+
+      // music inner buttons
+      document.getElementById('btn-music-control').onclick="document.getElementById('player').play()"
+
+      // art door
+      document.getElementById('art-door-btn').onclick = function() {
+
+        const abtn = document.getElementById('art-door-btn')
+        const ald = document.getElementById('art-door-left')
+        const ard = document.getElementById('art-door-right')
+        const adoor = document.getElementById('art-door')
+
+        ard.style.transform = 'translate(100%, 0px)'
+        ald.style.transform = 'translate(-100%, 0px)'
+        abtn.style.opacity = '0'
+        abtn.style.cursor = 'default'
+        setTimeout(function() {
+          adoor.style.zIndex = '-9999'
         }, 2000)
       }
 };
