@@ -7,6 +7,7 @@ window.onload = function() {
         const rd = document.getElementById('door-sub-right')
         const door = document.getElementById('door-main')
 
+        console.log("*deep rumbling*");
         rd.style.transform = 'translate(50vw, 0vh)'
         ld.style.transform = 'translate(-50vw, 0vh)'
         btn.style.opacity = '0'
@@ -23,6 +24,7 @@ window.onload = function() {
         const mrd = document.getElementById('music-door-right')
         const mdoor = document.getElementById('music-door-main')
 
+        console.log("button clickyyyyyy!! ^w^");
         mrd.style.transform = 'translate(100%, 0px)'
         mld.style.transform = 'translate(-100%, 0px)'
         mbtn.style.opacity = '0'
@@ -32,9 +34,6 @@ window.onload = function() {
         }, 2000)
       }
 
-      // music inner buttons
-      document.getElementById('btn-music-control').onclick="document.getElementById('player').play()"
-
       // art door
       document.getElementById('art-door-btn').onclick = function() {
 
@@ -43,6 +42,7 @@ window.onload = function() {
         const ard = document.getElementById('art-door-right')
         const adoor = document.getElementById('art-door')
 
+        console.log("(★ ω ★)");
         ard.style.transform = 'translate(100%, 0px)'
         ald.style.transform = 'translate(-100%, 0px)'
         abtn.style.opacity = '0'
