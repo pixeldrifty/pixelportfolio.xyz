@@ -1,1 +1,1 @@
-Very beta version 😔
+yippeeeee it looks good nowwwwww!! ^w^
